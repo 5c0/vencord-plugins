@@ -16,5 +16,8 @@ Adds a "Voice Tools" menu to channels allowing you to mute, deafen, move, or dis
 # [Wallets](./Wallets)
 Store your crypto wallet addresses and share them instantly in any chat using convenient slash commands.
 
+# [fuckoffIG](./fuckoffIG)
+Strip annoying IG tracking paramaters (igsh) from Instagram links before sending.
+
 # [envDiagnostics](./envDiagnostics)
 Logs internal Vencord modules and Discord client info to the console to help troubleshoot environment and messaging issues.  Only useful if you are building plugins, otherwise don't get this.
