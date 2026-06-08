@@ -1,7 +1,3 @@
-# [Streamcord](./Streamcord)
-
-Set your status to "Streaming" with a custom activity name and a link to any YouTube or Twitch video.
-
 # [FollowVoiceUser](./FollowVoiceUser)
 
 Automatically follow a specific user across different voice channels so you never lose track of them.
@@ -10,13 +6,13 @@ Automatically follow a specific user across different voice channels so you neve
 
 Change the platform icon (Desktop, Mobile, Xbox, etc.) that others see when you are online or in a voice call.
 
-# [purgeMessages](./purgeMessages)
+# [Streamcord](./Streamcord)
 
-[buggy/needs to be fixed] Quickly delete a specific number of your own messages from a channel using a simple slash command.
+Set your status to "Streaming" with a custom activity name and a link to any YouTube or Twitch video.
 
-# [voiceChatUtils](./voiceChatUtils)
+# [TimezoneSpoofer](./TimezoneSpoofer)
 
-Adds a "Voice Tools" menu to channels allowing you to mute, deafen, move, or disconnect everyone at once.
+Spoof your Discord client timezone to any popular timezone (e.g. Tokyo, London, UTC) using Vencord settings, correcting all chat timestamps, relative date labels ("Today", "Yesterday"), and hover tooltips.
 
 # [Wallets](./Wallets)
 
@@ -26,6 +22,10 @@ Store your crypto wallet addresses and share them instantly in any chat using co
 
 Logs internal Vencord modules and Discord client info to the console to help troubleshoot environment and messaging issues.  Only useful if you are building plugins, otherwise don't get this.
 
-# [TimezoneSpoofer](./TimezoneSpoofer)
+# [purgeMessages](./purgeMessages)
 
-Spoof your Discord client timezone to any popular timezone (e.g. Tokyo, London, UTC) using Vencord settings, correcting all chat timestamps, relative date labels ("Today", "Yesterday"), and hover tooltips.
+[Needs to be fixed] Quickly delete a specific number of your own messages from a channel using a simple slash command.
+
+# [voiceChatUtils](./voiceChatUtils)
+
+Adds a "Voice Tools" menu to channels allowing you to mute, deafen, move, or disconnect everyone at once.
