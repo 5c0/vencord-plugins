@@ -12,7 +12,7 @@ Change the platform icon (Desktop, Mobile, Xbox, etc.) that others see when you 
 
 # [purgeMessages](./purgeMessages)
 
-Quickly delete a specific number of your own messages from a channel using a simple slash command.
+[buggy/needs to be fixed] Quickly delete a specific number of your own messages from a channel using a simple slash command.
 
 # [voiceChatUtils](./voiceChatUtils)
 
