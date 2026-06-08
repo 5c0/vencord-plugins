@@ -24,7 +24,7 @@ Logs internal Vencord modules and Discord client info to the console to help tro
 
 # [purgeMessages](./purgeMessages)
 
-[Needs to be fixed] Quickly delete a specific number (MAX:100) of your own messages from a channel using a simple slash command.
+[Needs to be fixed] Quickly delete a specific number (Max:100) of your own messages from a channel using a simple slash command.
 
 # [voiceChatUtils](./voiceChatUtils)
 
