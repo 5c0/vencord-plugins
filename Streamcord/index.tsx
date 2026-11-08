@@ -1,9 +1,11 @@
-import definePlugin, { OptionType } from "@utils/types";
 import { definePluginSettings } from "@api/Settings";
-import { FluxDispatcher, Forms, React } from "@webpack/common";
-import { classes } from "@utils/misc";
-import { Margins } from "@utils/margins";
 import { ErrorCard } from "@components/ErrorCard";
+import { Heading } from "@components/Heading";
+import { Paragraph } from "@components/Paragraph";
+import { Margins } from "@utils/margins";
+import { classes } from "@utils/misc";
+import definePlugin, { OptionType } from "@utils/types";
+import { FluxDispatcher, React } from "@webpack/common";
 
 enum ActivityType {
   STREAMING = 1,
@@ -66,20 +68,19 @@ async function setStreamingStatus(disable?: boolean) {
 export default definePlugin({
   name: "Streamcord",
   description: "Set your Discord status as streaming with a custom YouTube/Twitch URL and activity name",
-  authors: [{ name: "lain", id: 939658593026867261n }],
-  settings,
+  authors: [{ name: "lain", id: 939658593026867261n }],  settings,
   start: () => setStreamingStatus(),
   stop: () => setStreamingStatus(true),
   settingsAboutComponent: () => (
     <>
       <ErrorCard className={classes(Margins.top16, Margins.bottom16)} style={{ padding: "1em" }}>
-        <Forms.FormTitle>Note</Forms.FormTitle>
-        <Forms.FormText>
+        <Heading className={Margins.bottom8}>Note</Heading>
+        <Paragraph>
           Your status will show as streaming with the YouTube/Twitch URL and activity name provided here.
-        </Forms.FormText>
+        </Paragraph>
       </ErrorCard>
       <div style={{ marginTop: 16, marginBottom: 16, display: "flex", flexDirection: "column", gap: "0.5em" }}>
-        <Forms.FormText>
+        <Paragraph>
           Go to{" "}
           <a
             href="https://www.youtube.com/watch"
@@ -90,13 +91,13 @@ export default definePlugin({
             YouTube/Twitch
           </a>{" "}
           to get a valid streaming URL.
-        </Forms.FormText>
-        <Forms.FormText>
+        </Paragraph>
+        <Paragraph>
           The activity name will be shown as the streaming status message.
-        </Forms.FormText>
-        <Forms.FormText>
+        </Paragraph>
+        <Paragraph>
           Your streaming status will be visible to friends and servers as if you were streaming live.
-        </Forms.FormText>
+        </Paragraph>
       </div>
     </>
   ),
