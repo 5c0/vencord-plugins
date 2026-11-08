@@ -4,10 +4,11 @@
  * This plugin purges messages from a channel
  */
 
-import { Forms, MessageActions, MessageStore, UserStore } from "@webpack/common";
-import { Channel, Message } from "@vencord/discord-types";
+import { ApplicationCommandInputType, ApplicationCommandOptionType, sendBotMessage } from "@api/Commands";
+import { Paragraph } from "@components/Paragraph";
 import definePlugin from "@utils/types";
-import { ApplicationCommandInputType, ApplicationCommandOptionType, sendBotMessage } from "@api/commands"; // If exists in Vencord, else implement manually
+import { Channel, Message } from "@vencord/discord-types";
+import { MessageActions, MessageStore, UserStore } from "@webpack/common";
 import React from "react";
 
 // Utility function to find an option value from command args
@@ -41,14 +42,14 @@ export default definePlugin({
   description: "Purges messages from a channel",
   authors: [
     {
-      name: "lain",
-      id: 939658593026867261n
+      name: "nyx",
+      id: 0n
     }
   ],
   settingsAboutComponent: () => (
-    <Forms.FormText className="plugin-warning">
+    <Paragraph className="plugin-warning">
       We can't guarantee this plugin won't get you warned or banned.
-    </Forms.FormText>
+    </Paragraph>
   ),
   commands: [
     {
