@@ -1,6 +1,7 @@
-import definePlugin, { OptionType } from "@utils/types";
 import { definePluginSettings } from "@api/Settings";
-import { Constants, RestAPI, SnowflakeUtils, showToast, Toasts, Forms } from "@webpack/common";
+import { Paragraph } from "@components/Paragraph";
+import definePlugin, { OptionType } from "@utils/types";
+import { Constants, RestAPI, showToast, SnowflakeUtils } from "@webpack/common";
 
 const settings = definePluginSettings({
   BTC: { type: OptionType.STRING, description: "", default: "" },
@@ -29,7 +30,7 @@ async function postMessage(channelId: string, content: string) {
       }
     });
   } catch {
-    showToast("Failed to send wallet address message", Toasts.Type.FAILURE);
+    showToast({ text: "Failed to send wallet address message", variant: "critical" });
   }
 }
 
@@ -37,7 +38,7 @@ async function executeCommand(command: string, channelId: string) {
   const address = settings.store[command];
   if (!address || address.trim() === "") {
     // Show a toast instead of sending a user message
-    showToast(`Your ${command} address is not set in the Wallets plugin settings.`, Toasts.Type.INFO);
+    showToast({ text: `Your ${command} address is not set in the Wallets plugin settings.` });
     return;
   }
   await postMessage(channelId, address);
@@ -60,12 +61,12 @@ export default definePlugin({
 
   settingsAboutComponent: () => (
     <>
-      <Forms.FormText>
+      <Paragraph>
         Enter your wallet addresses below. Use commands like <code>/btc</code> to quickly share your address.
-      </Forms.FormText>
-      <Forms.FormText>
+      </Paragraph>
+      <Paragraph>
         Leaving a field empty disables that crypto command.
-      </Forms.FormText>
+      </Paragraph>
     </>
   ),
 });
